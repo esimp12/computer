@@ -1,0 +1,2 @@
+- Update build to compile all testbenches
+- Update build to create circuit diagrams of all non testbench files

@@ -1,0 +1,10 @@
+# CMake
+bin/
+
+# Pixi environments
+.pixi
+*.egg-info
+*.conda
+
+# Node.js
+node_modules/

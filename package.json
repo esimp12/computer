@@ -1,0 +1,9 @@
+{
+
+  "scripts": {
+    "netlistsvg": "netlistsvg"
+  },
+  "dependencies": {
+    "netlistsvg": "^1.0.2"
+  }
+}
