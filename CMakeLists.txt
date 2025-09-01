@@ -17,43 +17,44 @@ foreach(f ${verilog_files})
     endif()
 endforeach()
 
-# DEBUG
-message(STATUS "Verilog source files: ${source_files}")
-message(STATUS "Verilog testbench files: ${testbench_files}")
+# Function for creating testbench targets dynamically
+function(add_verilog_testbench tb_file)
+    # Get testbench directory and testbench file
+    get_filename_component(tb_name ${tb_file} NAME_WE)
+
+    # Set name of binary
+    set(tb_bin ${CMAKE_CURRENT_BINARY_DIR}/${tb_name})
+
+    # TODO: Use yosys to get the exact components needed as dependencies
+    # NOTE: We currently pass all verilog *.v files as source files for 
+    # synthesization even if a testbench doesn't use that source.
+    #
+    # Set target for build, custom verilog command to synthesize, and 
+    # install final binary into bin directory
+    add_custom_target(
+        ${tb_name}_target ALL
+        DEPENDS ${tb_bin}
+    )
+    add_custom_command(
+        OUTPUT ${tb_bin}
+        COMMAND iverilog -o ${tb_bin} ${tb_file} ${source_files}
+        DEPENDS ${tb_file} ${source_files}
+        COMMENT "Compiling testbench ${tb_name}"
+        VERBATIM
+    )
+    install( 
+        FILES ${tb_bin} 
+        DESTINATION ${CMAKE_SOURCE_DIR}/bin
+        PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
+                    GROUP_READ GROUP_EXECUTE
+                    WORLD_READ WORLD_EXECUTE
+    )
+endfunction()
+
+# Create all testbench targets
+foreach(tb_file ${testbench_files})
+    add_verilog_testbench(${tb_file})
+endforeach()
 
 
-# halfadd.v
-# add_custom_target(
-#     gen_halfadd_tb ALL
-#     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/halfadd_tb
-# )
-# add_custom_command(
-#     OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/halfadd_tb
-#     COMMAND iverilog -o ${CMAKE_CURRENT_BINARY_DIR}/halfadd_tb ${CMAKE_SOURCE_DIR}/src/halfadd_tb.v ${CMAKE_SOURCE_DIR}/src/halfadd.v
-#     DEPENDS ${CMAKE_SOURCE_DIR}/src/halfadd_tb.v ${CMAKE_SOURCE_DIR}/src/halfadd.v
-#     COMMENT "Compiling halfadd_tb.v halfadd.v to halfadd_tb"
-#     VERBATIM
-# )
-# install( 
-#     FILES ${CMAKE_CURRENT_BINARY_DIR}/halfadd_tb 
-#     DESTINATION ${CMAKE_SOURCE_DIR}/bin
-#     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
-# )
-
-# fulladd.v
-# add_custom_target(
-#     gen_fulladd_tb ALL
-#     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/fulladd_tb
-# )
-# add_custom_command(
-#     OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/fulladd_tb
-#     COMMAND iverilog -o ${CMAKE_CURRENT_BINARY_DIR}/fulladd_tb ${CMAKE_SOURCE_DIR}/src/fulladd_tb.v ${CMAKE_SOURCE_DIR}/src/fulladd.v ${CMAKE_SOURCE_DIR}/src/halfadd.v
-#     DEPENDS ${CMAKE_SOURCE_DIR}/src/fulladd_tb.v ${CMAKE_SOURCE_DIR}/src/fulladd.v ${CMAKE_SOURCE_DIR}/src/halfadd.v 
-#     COMMENT "Compiling fulladd_tb.v fulladd.v halfadd.v to fulladd_tb"
-#     VERBATIM
-# )
-# install( 
-#     FILES ${CMAKE_CURRENT_BINARY_DIR}/fulladd_tb 
-#     DESTINATION ${CMAKE_SOURCE_DIR}/bin
-#     PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
-# )
+# TODO: Create targets to generate images of circuit diagrams
