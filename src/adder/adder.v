@@ -1,11 +1,12 @@
-module add8b(x, y, s, c_out);
+module adder(x, y, c_in, s, c_out);
     input [7:0] x;
     input [7:0] y;
+    input c_in;
     output [7:0] s;
     output c_out;
     wire [6:0] c;
 
-    fulladd fa0(1'b0, x[0], y[0], s[0], c[0]);
+    fulladd fa0(c_in, x[0], y[0], s[0], c[0]);
     fulladd fa1(c[0], x[1], y[1], s[1], c[1]);
     fulladd fa2(c[1], x[2], y[2], s[2], c[2]);
     fulladd fa3(c[2], x[3], y[3], s[3], c[3]);
