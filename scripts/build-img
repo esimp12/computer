@@ -1,0 +1,25 @@
+#!/usr/bin/bash
+#
+# usage: build-img path/to/verilog.v module_name output_dir
+
+set -e
+
+MODULES=$1  # all verilog modules to synthesize
+TOP=$2      # top level module to create diagram for
+OUTDIR=$3   # output directory to create diagram in
+
+# Save caller working directory
+orig_dir=$(pwd)
+cd $OUTDIR || exit
+
+# Generate netlist for toplevel module
+yosys -QTq -p "read_verilog $MODULES; synth -top $TOP; write_json \"${OUTDIR}/${TOP}_netlist.json\""
+
+# Create SVG from netlist
+npm run netlistsvg -- "$OUTDIR/${TOP}_netlist.json" -o "${OUTDIR}/${TOP}.svg"
+
+# Clean up artifacts
+rm "${OUTDIR}/${TOP}_netlist.json"
+
+# Reset caller working directory
+cd $orig_dir || exit

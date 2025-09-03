@@ -19,12 +19,12 @@
   .splitjoinBody {
     fill:#000;
   }</style>
-  <g s:type="not" transform="translate(77,62.5)" s:width="30" s:height="20" id="cell_$abc$119$auto$blifparse.cc:396:parse_blif$120">
+  <g s:type="not" transform="translate(77,62.5)" s:width="30" s:height="20" id="cell_$abc$122$auto$blifparse.cc:396:parse_blif$123">
     <s:alias val="$_NOT_"/>
     <s:alias val="$not"/>
     <s:alias val="$logic_not"/>
-    <path d="M0,0 L0,20 L20,10 Z" class="cell_$abc$119$auto$blifparse.cc:396:parse_blif$120"/>
-    <circle cx="23" cy="10" r="3" class="cell_$abc$119$auto$blifparse.cc:396:parse_blif$120"/>
+    <path d="M0,0 L0,20 L20,10 Z" class="cell_$abc$122$auto$blifparse.cc:396:parse_blif$123"/>
+    <circle cx="23" cy="10" r="3" class="cell_$abc$122$auto$blifparse.cc:396:parse_blif$123"/>
     <g s:x="0" s:y="10" s:pid="A"/>
     <g s:x="25" s:y="10" s:pid="Y"/>
   </g>

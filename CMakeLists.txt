@@ -1,9 +1,15 @@
 cmake_minimum_required(VERSION 3.20)
 project(COMPUTER)
 
+# Local directories
+set(scripts_dir "${CMAKE_SOURCE_DIR}/scripts")
+set(bin_dir "${CMAKE_SOURCE_DIR}/bin")
+set(svg_dir "${CMAKE_SOURCE_DIR}/svgs")
+set(src_dir "${CMAKE_SOURCE_DIR}/src")
+
 # Find all project verilog files
 file(GLOB_RECURSE verilog_files CONFIGURE_DEPENDS
-    "${CMAKE_SOURCE_DIR}/src/**/*.v"
+    "${src_dir}/**/*.v"
 )
 
 # Filter out source files from testbenches
@@ -19,7 +25,7 @@ endforeach()
 
 # Function for creating testbench targets dynamically
 function(add_verilog_testbench tb_file)
-    # Get testbench directory and testbench file
+    # Get testbench file
     get_filename_component(tb_name ${tb_file} NAME_WE)
 
     # Set name of binary
@@ -44,7 +50,7 @@ function(add_verilog_testbench tb_file)
     )
     install( 
         FILES ${tb_bin} 
-        DESTINATION ${CMAKE_SOURCE_DIR}/bin
+        DESTINATION ${bin_dir}
         PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
                     GROUP_READ GROUP_EXECUTE
                     WORLD_READ WORLD_EXECUTE
@@ -56,5 +62,42 @@ foreach(tb_file ${testbench_files})
     add_verilog_testbench(${tb_file})
 endforeach()
 
+# Set build circuit diagram script
+set(build_img_script "${scripts_dir}/build-img")
 
-# TODO: Create targets to generate images of circuit diagrams
+# Create targets to generate images of circuit diagrams
+function(add_verilog_svg vl_file)
+    # Get verilog file
+    get_filename_component(vl_name ${vl_file} NAME_WE)
+
+    # Set name of output svg
+    set(vl_svg ${CMAKE_CURRENT_BINARY_DIR}/${vl_name}.svg)
+    # Set source files string to pass to script correctly
+    string(REPLACE ";" " " source_files_str "${source_files}")
+
+    # Set target for build, custom script to create circuit diagram, and 
+    # install final svg into svgs directory
+    add_custom_target(
+        ${vl_name}_target ALL
+        DEPENDS ${vl_svg}
+    )
+    add_custom_command(
+        OUTPUT ${vl_svg}
+        COMMAND ${build_img_script} "${source_files_str}" "${vl_name}" "${CMAKE_CURRENT_BINARY_DIR}" 
+        DEPENDS ${build_img_script} ${source_files}
+        COMMENT "Generating circuit diagram for module ${vl_name}"
+        VERBATIM
+    )
+    install( 
+        FILES ${vl_svg} 
+        DESTINATION ${svg_dir}
+        PERMISSIONS OWNER_READ OWNER_WRITE 
+                    GROUP_READ 
+                    WORLD_READ 
+    )
+endfunction()
+
+# Create all circuit diagrams
+foreach(vl_file ${source_files})
+    add_verilog_svg(${vl_file})
+endforeach()
