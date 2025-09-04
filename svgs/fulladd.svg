@@ -19,12 +19,12 @@
   .splitjoinBody {
     fill:#000;
   }</style>
-  <g s:type="or" transform="translate(261,19.5)" s:width="30" s:height="25" id="cell_$abc$102$auto$blifparse.cc:396:parse_blif$103">
+  <g s:type="or" transform="translate(261,19.5)" s:width="30" s:height="25" id="cell_$abc$106$auto$blifparse.cc:396:parse_blif$107">
     <s:alias val="$or"/>
     <s:alias val="$logic_or"/>
     <s:alias val="$_OR_"/>
-    <path d="M0,25 L0,25 L15,25 A15 12.5 0 0 0 15,0 L0,0" class="cell_$abc$102$auto$blifparse.cc:396:parse_blif$103"/>
-    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$abc$102$auto$blifparse.cc:396:parse_blif$103"/>
+    <path d="M0,25 L0,25 L15,25 A15 12.5 0 0 0 15,0 L0,0" class="cell_$abc$106$auto$blifparse.cc:396:parse_blif$107"/>
+    <path d="M0,0 A30 25 0 0 1 0,25" class="cell_$abc$106$auto$blifparse.cc:396:parse_blif$107"/>
     <g s:x="3" s:y="5" s:pid="A"/>
     <g s:x="3" s:y="20" s:pid="B"/>
     <g s:x="30" s:y="12.5" s:pid="Y"/>
