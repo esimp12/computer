@@ -12,14 +12,26 @@ OUTDIR=$3   # output directory to create diagram in
 orig_dir=$(pwd)
 cd $OUTDIR || exit
 
+# Set local variables
+netlist_json="${OUTDIR}/${TOP}_netlist.json"
+svg_tmp_file="${OUTDIR}/${TOP}_tmp.svg"
+svg_out_file="${OUTDIR}/${TOP}.svg"
+
 # Generate netlist for toplevel module
-yosys -QTq -p "read_verilog $MODULES; synth -top $TOP; write_json \"${OUTDIR}/${TOP}_netlist.json\""
+yosys -QTq -p "read_verilog $MODULES; synth -top $TOP; write_json ${netlist_json}"
 
 # Create SVG from netlist
-npm run netlistsvg -- "$OUTDIR/${TOP}_netlist.json" -o "${OUTDIR}/${TOP}.svg"
+npm run netlistsvg -- ${netlist_json} -o ${svg_tmp_file}
+
+# Normalize svg so that it is stable across commits
+scour -i ${svg_tmp_file} -o ${svg_out_file} \
+  --enable-id-stripping \
+  --enable-comment-stripping \
+  --shorten-ids \
+  --indent=none
 
 # Clean up artifacts
-rm "${OUTDIR}/${TOP}_netlist.json"
+rm ${netlist_json} ${svg_tmp_file}
 
 # Reset caller working directory
 cd $orig_dir || exit

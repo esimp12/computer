@@ -16,12 +16,10 @@ version = "0.1.0"
 [package.build]
 backend = { name = "pixi-build-cmake", version = "0.1.*" }
 
-[package.build-dependencies]
-iverilog = ">=11.0,<12"
-yosys = ">=0.51,<0.52"
-cmake = ">=3.31.6,<4"
-ninja = ">=1.12.1,<2"
-
-[dependencies]
+[package.host-dependencies]
+cmake = ">=4.1.1,<5"
+ninja = ">=1.13.1,<2"
 yosys = ">=0.56,<0.57"
+iverilog = ">=11.0,<12"
 nodejs = ">=24.4.1,<24.5"
+scour = ">=0.38.2,<0.39"
