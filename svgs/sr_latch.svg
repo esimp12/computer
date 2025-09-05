@@ -25,31 +25,31 @@
 <s:alias val="$logic_nand"/>
 <s:alias val="$_NAND_"/>
 <s:alias val="$_ANDNOT_"/>
-<path class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$145" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
-<circle class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$145" cx="34" cy="12.5" r="3"/>
+<path class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$153" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
+<circle class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$153" cx="34" cy="12.5" r="3"/>
 </g>
 <g transform="translate(150,27)" s:height="25" s:type="and" s:width="30">
 <s:alias val="$and"/>
 <s:alias val="$logic_and"/>
 <s:alias val="$_AND_"/>
-<path class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$146" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
+<path class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$154" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
 </g>
 <g transform="translate(219,82)" s:height="25" s:type="reduce_nor" s:width="33">
 <s:alias val="$nor"/>
 <s:alias val="$reduce_nor"/>
 <s:alias val="$_NOR_"/>
 <s:alias val="$_ORNOT_"/>
-<path class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$147" d="m0 25h15a15 12.5 0 0 0 0-25h-15"/>
-<path class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$147" d="m0 0a30 25 0 0 1 0 25"/>
-<circle class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$147" cx="34" cy="12.5" r="3"/>
+<path class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$155" d="m0 25h15a15 12.5 0 0 0 0-25h-15"/>
+<path class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$155" d="m0 0a30 25 0 0 1 0 25"/>
+<circle class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$155" cx="34" cy="12.5" r="3"/>
 </g>
 <g transform="translate(148,89.5)" s:height="25" s:type="nand" s:width="30">
 <s:alias val="$nand"/>
 <s:alias val="$logic_nand"/>
 <s:alias val="$_NAND_"/>
 <s:alias val="$_ANDNOT_"/>
-<path class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$148" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
-<circle class="cell_$abc$143$auto$blifparse.cc:396:parse_blif$148" cx="34" cy="12.5" r="3"/>
+<path class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$156" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
+<circle class="cell_$abc$151$auto$blifparse.cc:396:parse_blif$156" cx="34" cy="12.5" r="3"/>
 </g>
 <g transform="translate(12,107)" s:height="20" s:type="inputExt" s:width="30">
 <text class="nodelabel cell_s" x="15" y="-4" s:attribute="ref">s</text>
