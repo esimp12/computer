@@ -24,7 +24,7 @@
 <s:alias val="$pmux"/>
 <s:alias val="$mux"/>
 <s:alias val="$_MUX_"/>
-<path class="cell_$abc$131$auto$blifparse.cc:396:parse_blif$132" d="m0 0 20 10v20l-20 10z"/>
+<path class="cell_$abc$139$auto$blifparse.cc:396:parse_blif$140" d="m0 0 20 10v20l-20 10z"/>
 </g>
 <g transform="translate(12,152)" s:height="20" s:type="inputExt" s:width="30">
 <text class="nodelabel cell_s" x="15" y="-4" s:attribute="ref">s</text>
