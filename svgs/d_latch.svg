@@ -24,24 +24,24 @@
 <s:alias val="$pmux"/>
 <s:alias val="$mux"/>
 <s:alias val="$_MUX_"/>
-<path class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$154" d="m0 0 20 10v20l-20 10z"/>
+<path class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$167" d="m0 0 20 10v20l-20 10z"/>
 </g>
 <g transform="translate(82,27)" s:height="25" s:type="reduce_nor" s:width="33">
 <s:alias val="$nor"/>
 <s:alias val="$reduce_nor"/>
 <s:alias val="$_NOR_"/>
 <s:alias val="$_ORNOT_"/>
-<path class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$155" d="m0 25h15a15 12.5 0 0 0 0-25h-15"/>
-<path class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$155" d="m0 0a30 25 0 0 1 0 25"/>
-<circle class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$155" cx="34" cy="12.5" r="3"/>
+<path class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$168" d="m0 25h15a15 12.5 0 0 0 0-25h-15"/>
+<path class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$168" d="m0 0a30 25 0 0 1 0 25"/>
+<circle class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$168" cx="34" cy="12.5" r="3"/>
 </g>
 <g transform="translate(153,34.5)" s:height="25" s:type="nand" s:width="30">
 <s:alias val="$nand"/>
 <s:alias val="$logic_nand"/>
 <s:alias val="$_NAND_"/>
 <s:alias val="$_ANDNOT_"/>
-<path class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$156" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
-<circle class="cell_$abc$152$auto$blifparse.cc:396:parse_blif$156" cx="34" cy="12.5" r="3"/>
+<path class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$169" d="m0 0v25h15a15 12.5 0 0 0 0-25z"/>
+<circle class="cell_$abc$165$auto$blifparse.cc:396:parse_blif$169" cx="34" cy="12.5" r="3"/>
 </g>
 <g transform="translate(12,22)" s:height="20" s:type="inputExt" s:width="30">
 <text class="nodelabel cell_d" x="15" y="-4" s:attribute="ref">d</text>
