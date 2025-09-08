@@ -24,8 +24,8 @@
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$179$auto$blifparse.cc:396:parse_blif$180" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$179$auto$blifparse.cc:396:parse_blif$180" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$191$auto$blifparse.cc:396:parse_blif$192" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$191$auto$blifparse.cc:396:parse_blif$192" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,62)" s:height="40" s:type="generic" s:width="30">
 <text class="nodelabel cell_dl" x="15" y="-4" s:attribute="ref">d_latch</text>

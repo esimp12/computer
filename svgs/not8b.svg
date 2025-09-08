@@ -24,57 +24,57 @@
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$165" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$165" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$177" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$177" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,67)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$166" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$166" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$178" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$178" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,122)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$167" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$167" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$179" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$179" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,177)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$168" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$168" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$180" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$180" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,232)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$169" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$169" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$181" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$181" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,287)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$170" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$170" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$182" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$182" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,342)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$171" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$171" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$183" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$183" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(149,397)" s:height="20" s:type="not" s:width="30">
 <s:alias val="$_NOT_"/>
 <s:alias val="$not"/>
 <s:alias val="$logic_not"/>
-<path class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$172" d="m0 0v20l20-10z"/>
-<circle class="cell_$abc$164$auto$blifparse.cc:396:parse_blif$172" cx="23" cy="10" r="3"/>
+<path class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$184" d="m0 0v20l20-10z"/>
+<circle class="cell_$abc$176$auto$blifparse.cc:396:parse_blif$184" cx="23" cy="10" r="3"/>
 </g>
 <g transform="translate(12,57)" s:height="20" s:type="inputExt" s:width="30">
 <text class="nodelabel cell_x" x="15" y="-4" s:attribute="ref">x</text>
